@@ -39,7 +39,7 @@
 // command consists of "G", "()", and/or "(al)" in some order.
 
 
-
+// Accepted
 var interpret = function(cmd) {
     let res=[]
     for(let i=0;i<cmd.length;i++){
@@ -52,9 +52,9 @@ var interpret = function(cmd) {
             res.push("G")
         }
     }
-    // return res.join("")
-    console.log(res.join(""))
+    return res.join("")
+
 };  
 
 let cmd = "(al)G(al)()()G"
-interpret(cmd)
+console.log(interpret(cmd))

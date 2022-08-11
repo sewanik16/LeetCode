@@ -33,9 +33,8 @@ var defangIPaddr = function(address) {
         else
         res = res + address[i]
     }
-    // return res
-    console.log(res)
+    return res
 };
 
 let address = "255.100.50.0"
-defangIPaddr(address)
+console.log(defangIPaddr(address))

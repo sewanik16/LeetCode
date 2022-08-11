@@ -49,7 +49,9 @@
 // Output: [1,0]
 
 var plusOne = function(digits) {
-    
+    let digit = parseInt(digits.join(""))
+    digits = (digit+1).toString()
+    return digits.split("")
 };
 
 let digits = [1,2,3]
