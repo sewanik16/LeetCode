@@ -48,11 +48,43 @@
 // Input: digits = [9]
 // Output: [1,0]
 
-var plusOne = function(digits) {
-    let digit = parseInt(digits.join(""))
-    digits = (digit+1).toString()
-    return digits.split("")
+function plusOne(digits){
+    for(let i=digits.length-1;i>=0;i--){
+        if(digits[i] != 9){
+            digits[i] ++
+            break
+        }else{
+            digits[i] = 0
+        }
+        // console.log(digits)
+    }
+        
+
+    if(digits[0]==0){
+        let arr = []
+        arr.unshift(1)
+        return arr
+    }
+    return digits
 };
 
-let digits = [1,2,3]
+let digits = [99] 
 console.log(plusOne(digits))
+
+
+
+
+
+// var plusOne = function(digits) {
+//     let digit = parseInt(digits.join(""))
+
+//     digits = (digit+1).toString()
+    
+//     return digits.split("")
+// };
+
+// let digits = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3] tis testcase not accepted
+// console.log(plusOne(digits))
+
+// let str = 61453901951867055
+// console.log(str)
